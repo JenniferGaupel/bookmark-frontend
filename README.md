@@ -1,4 +1,4 @@
-# Front end for pythin bookmark rest API
+# Front end for python bookmark rest API
 
 Run npm Install
 
