@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Front end for pythin bookmark rest API
+
+Run npm Install
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
