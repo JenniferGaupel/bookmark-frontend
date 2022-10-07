@@ -1,12 +1,10 @@
-import "./App.css";
-import axios from "axios";
-import Button from "@mui/material/Button";
+import Register from "./Register";
 
 function App() {
   return (
-    <div className="App">
-      <Button variant="contained">Hello World</Button>
-    </div>
+    <main className="App">
+      <Register />
+    </main>
   );
 }
 
