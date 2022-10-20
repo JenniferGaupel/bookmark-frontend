@@ -13,6 +13,7 @@ const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = "/api/v1/auth/register";
 
 const Register = () => {
+  // we will want a separate useRef for our email, to set focus when it's time. We never set one up for password here (or in the login page)
   const userRef = useRef();
   const errRef = useRef();
 
@@ -73,7 +74,11 @@ const Register = () => {
     try {
       const response = await axios.post(
         REGISTER_URL,
-        JSON.stringify({ email: "jen@app.com", username: user, password: pwd }),
+        JSON.stringify({
+          email: "jen2@app.com",
+          username: user,
+          password: pwd,
+        }),
         {
           headers: { "Content-Type": "application/json" },
           withCredentials: true,
@@ -93,7 +98,7 @@ const Register = () => {
         setErrMsg("Registration failed");
       }
 
-      //Setting focus for our screen reader
+      // Setting focus for our screen reader
       errRef.current.focus();
     }
   };
